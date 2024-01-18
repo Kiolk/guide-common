@@ -1,0 +1,19 @@
+targets:
+  $default:
+    sources:
+    builders:
+      graphql_codegen:
+        # all options go here
+        options:
+          scalars:
+            URL:
+              type: String
+            ISODateTime:
+              type: DateTime
+            JSON:
+              type: Map<String, dynamic>
+            UUID:
+              type: String
+          clients:
+            - graphql
+            - graphql_flutter
